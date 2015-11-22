@@ -13,7 +13,7 @@
             * {  animation-duration: .2s; }
 
         EXCEPTIONS: If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
-                .SomeCutomComponent, .SomCustomComponent * {animation-duration: 0s; }  
+                .SomeCustomComponent, .SomCustomComponent * {animation-duration: 0s; }  
     */
 
 (function(){
