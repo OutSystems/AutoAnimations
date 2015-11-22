@@ -1,26 +1,3 @@
-(function(){
-
-// Configuration needed by AutoAnimations
-// document.styleSheets[0].insertRule("* {animation-duration: .2s}", 0);
-
-// Load Velocity.js if needed
-
-if (window.Velocity) {
-	AutoAnimations();
-} else {
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("GET", "//cdn.rawgit.com/julianshapiro/velocity/1.2.3/velocity.min.js");
-	xmlhttp.onreadystatechange = function(){
-		if ((xmlhttp.status == 200) && (xmlhttp.readyState == 4)) {
-			eval(xmlhttp.responseText);
-			AutoAnimations();
-		}};
-	xmlhttp.send();
-}
-
-// AUTO ANIMATIONS
-
-function AutoAnimations() {
     /*
 
         AUTO ANIMATIONS
@@ -40,6 +17,27 @@ function AutoAnimations() {
         EXCEPTIONS: If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
                 .SomeCutomComponent, .SomCustomComponent * {animation-duration: 0s; }  
     */
+
+(function(){
+
+// Configuration needed by AutoAnimations
+// document.styleSheets[0].insertRule("* {animation-duration: .2s}", 0);
+
+// Load Velocity.js if needed
+if (window.Velocity) {
+	AutoAnimations();
+} else {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", "//cdn.rawgit.com/julianshapiro/velocity/1.2.3/velocity.min.js");
+	xmlhttp.onreadystatechange = function(){
+		if ((xmlhttp.status == 200) && (xmlhttp.readyState == 4)) {
+			eval(xmlhttp.responseText);
+			AutoAnimations();
+		}};
+	xmlhttp.send();
+}
+
+function AutoAnimations() {
 
     if (HTMLElement.prototype._insertBefore)
         return;
