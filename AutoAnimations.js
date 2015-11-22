@@ -71,7 +71,7 @@ function AutoAnimations() {
     }
 
     function storeDisplayAndHide(node) {
-        node.dataset.initialDisplay = node.style.display || "";
+        node.dataset.initialDisplay = node.style.display;
         node.style.display = 'none';
     }
 
