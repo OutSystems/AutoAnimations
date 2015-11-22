@@ -68,19 +68,6 @@ function AutoAnimations() {
         hideElement.apply( this, arguments );
     }
 
-    function storeDisplayAndHide(node) {
-        node.dataset.initialDisplay = node.style.display;
-        node.style.display = 'none';
-    }
-
-    function restoreDisplay(node) {
-        if(node.dataset.initialDisplay != null){
-            node.display = node.dataset.initialDisplay;
-            delete node.dataset.initialDisplay;
-        }
-    }
-
-
     function showElement(node) {
         toggleElement(node, true);
     }
@@ -138,14 +125,14 @@ function AutoAnimations() {
         //inline, inline-block fixed and absolute will fade instead of slide
         if (style.position != "static" || style.float != "none" || style.display.indexOf("inline") != -1) {
             if (show) {
-                storeDisplayAndHide(node);
-                Velocity(node, {opacity:1}, animationProperties);
+		node.style.display = 'none';
+		Velocity(node, {opacity:1}, animationProperties);
             } else {
                 Velocity.Redirects.fadeOut(node, animationProperties);
             }
         } else {
             if (show) {
-                storeDisplayAndHide(node);
+		node.style.display = 'none';
                 Velocity.Redirects.slideDown(node, animationProperties);
             } else {
                 Velocity.Redirects.slideUp(node, animationProperties);
@@ -153,6 +140,5 @@ function AutoAnimations() {
         }
     }
 }
-
 
 })();
