@@ -6,7 +6,6 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Fade in/out for all others
 - Elements with existing CSS transitions or animations will be left alone
 - Uses velocity.js to assure smooth 60fps animations even in mobile
-- Elements shown/hidden using the style's display (e.g. jquery's show, hide and toggle) will not be animated.
 
 <img src="http://i.imgur.com/EMN0gPG.gif" height=200px/>
 
@@ -18,6 +17,10 @@ Just include this script, and add an animation-duration to your css, e.g.
 <pre>* { 
     animation-duration: .2s; 
 }</pre>
+
+####NOTES
+- Elements shown/hidden using the style's display (e.g. jquery's show, hide and toggle) will not be animated.
+- In javascript UI frameworks (e.g. React) it's reccomended that this script is run after first render 
 
 ####EXCEPTIONS
 If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
