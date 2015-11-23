@@ -6,6 +6,7 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Elements with existing CSS transitions or animations will be left alone
 - Uses velocity.js to assure smooth 60fps animations even in mobile
 
+<img src="http://i.imgur.com/EMN0gPG.gif" height=200px/>
 ##USAGE
 Just include this script, and add an animation-duration to your css, e.g. 
 
