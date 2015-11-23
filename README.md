@@ -13,6 +13,6 @@ Just include this script, and add an animation-duration to your css, e.g.
     animation-duration: .2s; 
 }</pre>
 
-##EXCEPTIONS
+####EXCEPTIONS
 If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
 <pre>.SomeCustomComponent, .SomCustomComponent * {animation-duration: 0s; }  </pre>
