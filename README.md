@@ -20,7 +20,7 @@ Just include this script, and add an animation-duration to your css, e.g.
 
 ####NOTES
 - Elements shown/hidden using the style's display (e.g. jquery's show, hide and toggle) will not be animated.
-- In javascript UI frameworks (e.g. React) it's reccomended that this script is run after first render 
+- In javascript UI frameworks (e.g. React) it's recommended that this script is run after first render 
 
 ####EXCEPTIONS
 If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
