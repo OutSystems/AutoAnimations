@@ -19,7 +19,7 @@
 
 (function(){
 
-    // Configuration needed by AutoAnimations. Put it in the CSS
+    // Configuration needed by AutoAnimations. Put it in the CSS instead
     //document.styleSheets[0].insertRule("* {animation-duration: .5s}", 0);
 
     "use strict";
@@ -82,6 +82,7 @@
     
         function hideElement(node) {
             if (isAnimating(node)) {
+                // probably we're inside a removechild cycle
                 if (node.nextElementSibling) {
                     do  {
                         node = node.nextElementSibling;
@@ -93,16 +94,15 @@
                             node = node.previousElementSibling;
                         } while (node.previousElementSibling && isAnimating(node));
                     }
-                    if (isAnimating(node)) {
-                        console.log("this should not be happening");
-                    }
                 }
             }
-            toggleElement(node, false, function(){
-                 if (node.parentNode) {
-                    node.parentNode._removeChild(node);
-                 }
-            });
+            if (!isAnimating(node)) {
+                toggleElement(node, false, function(){
+                     if (node.parentNode) {
+                        node.parentNode._removeChild(node);
+                     }
+                });
+            }
         }
         
         function isAnimating(node) {
