@@ -4,10 +4,10 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Slide down/up for elements with display=block & position=static
 - Fade in/out for all others
 - Elements with existing CSS transitions or animations will be left alone
-- Uses velocity.js to assure smooth 60fps animations
+- Uses velocity.js to assure smooth 60fps animations even in mobile
 
 ##USAGE
-Just add an animation duration to your css, e.g. 
+Just add this script and an animation-duration to your css, e.g. 
 
 <pre>* { 
     animation-duration: .2s; 
