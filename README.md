@@ -7,7 +7,7 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Uses velocity.js to assure smooth 60fps animations even in mobile
 
 ##USAGE
-Just add this script and an animation-duration to your css, e.g. 
+Just include this script, and an animation-duration to your css, e.g. 
 
 <pre>* { 
     animation-duration: .2s; 
