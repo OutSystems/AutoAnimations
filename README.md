@@ -6,7 +6,7 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Fade in/out for all others
 - Elements with existing CSS transitions or animations will be left alone
 - Uses velocity.js to assure smooth 60fps animations even in mobile
-- Elements that are shown/hidden using the the style display property (e.g. jquery's show, hide and toggle) will not be animated.
+- Elements shown/hidden using the style's display (e.g. jquery's show, hide and toggle) will not be animated.
 
 <img src="http://i.imgur.com/EMN0gPG.gif" height=200px/>
 
