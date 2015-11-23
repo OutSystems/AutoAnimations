@@ -1,4 +1,5 @@
 # AutoAnimations
+_It's like auto-tune for web pages_
 
 Automatically animate all inserted and removed DOM elements with good defaults:
 - Slide down/up for elements with display=block & position=static
