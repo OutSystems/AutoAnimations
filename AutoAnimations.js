@@ -156,14 +156,14 @@
             //inline, inline-block fixed and absolute will fade instead of slide
             if (style.position != "static" || style.float != "none" || style.display.indexOf("inline") != -1) {
                 if (show) {
-            node.style.display = 'none';
-            Velocity(node, {opacity:1}, animationProperties);
+                    node.style.display = 'none';
+                    Velocity(node, {opacity:1}, animationProperties);
                 } else {
                     Velocity.Redirects.fadeOut(node, animationProperties);
                 }
             } else {
                 if (show) {
-            node.style.display = 'none';
+                    node.style.display = 'none';
                     Velocity.Redirects.slideDown(node, animationProperties);
                 } else {
                     Velocity.Redirects.slideUp(node, animationProperties);
