@@ -11,6 +11,8 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 
 compare with http://todomvc.com/examples/react/ (that has no autoanimate)
 
+<img src="http://i.imgur.com/WYJcXNl.gif" height=200px/>
+
 ##USAGE
 Just include this script, and add an animation-duration to your css, e.g. 
 
