@@ -23,6 +23,7 @@ Just include this script, and add an animation-duration to your css, e.g.
 - In javascript UI frameworks (e.g. React) it's recommended that this script is run after first render 
 - You can add this as the URL of a bookmark to create a bookmarklet to test it in any web page:
     - <pre>javascript:(function(){document.styleSheets[0].insertRule("* {animation-duration: .2s}", 0);document.body.appendChild(document.createElement('script')).src='https://rawgit.com/OutSystems/AutoAnimations/master/AutoAnimations.js';})();</pre>
+- This overrides HTMLElement prototype methods, so it's a huge hack (only a POC) and there might be several side effects. 
 
 ####EXCEPTIONS
 If you don't want some element to automatically animate (e.g. external libraries) just set its animation-duration to 0s, e.g. :
