@@ -31,7 +31,7 @@
     // load Velocity.js if needed
     var velocityURL = "//cdn.rawgit.com/julianshapiro/velocity/1.2.3/velocity.min.js";
     
-    if (window.Velocity) {
+    if (window.Velocity || (window.$ && $.Velocity)) {
         AutoAnimations();
     } else if (window.require){
         require([velocityURL], function (Velocity) {
@@ -50,6 +50,8 @@
     
     function AutoAnimations() {
 
+		var Velocity = window.Velocity || $.Velocity;
+		
         // Override native methods (yup, this is hard core)
     
         HTMLElement.prototype._appendChild = HTMLElement.prototype.appendChild;
@@ -157,7 +159,7 @@
             if (style.position != "static" || style.float != "none" || style.display.indexOf("inline") != -1) {
                 if (show) {
                     node.style.display = 'none';
-                    Velocity(node, {opacity:1}, animationProperties);
+                    Velocity.Redirects.fadeIn(node, animationProperties);
                 } else {
                     Velocity.Redirects.fadeOut(node, animationProperties);
                 }
