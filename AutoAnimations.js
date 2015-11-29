@@ -50,7 +50,7 @@
     
     function AutoAnimations() {
 
-		var Velocity = window.Velocity || $.Velocity;
+	var Velocity = window.Velocity || $.Velocity;
 		
         // Override native methods (yup, this is hard core)
     
