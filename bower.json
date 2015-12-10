@@ -1,0 +1,24 @@
+{
+  "name": "auto-animations",
+  "main": "AutoAnimations.js",
+  "homepage": "https://github.com/OutSystems/AutoAnimations",
+  "authors": [
+    "tiagosimoes"
+  ],
+  "description": "Automatically animate all inserted and removed DOM elements",
+  "moduleType": [],
+  "keywords": [
+    "auto",
+    "animation",
+    "velocity",
+    "automatic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
