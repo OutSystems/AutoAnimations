@@ -7,6 +7,7 @@ Automatically animate all inserted and removed DOM elements with good defaults:
 - Elements with existing CSS transitions or animations will be left alone
 - Uses velocity.js to assure smooth 60fps animations even in mobile
 
+
 <img src="http://i.imgur.com/EMN0gPG.gif" height=200px/>
 
 compare with http://todomvc.com/examples/react/ (that has no autoanimate)
